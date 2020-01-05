@@ -29,7 +29,9 @@ struct SearchView: View {
                     )
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 ForEach(beerStore.beers) { beer in
-                    BeerView(beer: beer)
+                    NavigationLink(destination: BeerDetail(beer: beer)) {
+                        BeerView(beer: beer)
+                    }
                 }
             }.navigationBarTitle(Text("Busca tu cerveza"))
         }

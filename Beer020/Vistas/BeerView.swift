@@ -21,8 +21,3 @@ struct BeerView: View {
     }
 }
 
-struct BeerView_Previews: PreviewProvider {
-    static var previews: some View {
-        BeerView(beer: Beer(id: 0, name: "TestBeer", description: "Cerveza para test", image_url: ""))
-    }
-}
