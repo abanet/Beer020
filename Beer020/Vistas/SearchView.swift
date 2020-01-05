@@ -9,29 +9,37 @@
 import SwiftUI
 
 struct SearchView: View {
-    @State private var query: String = "" {
-        didSet {
-            print("cambio") 
-        }
-    }
+    @State private var query: String = ""
     @EnvironmentObject var beerStore: BeerStore
     
     var body: some View {
+        
+       
         NavigationView {
             List {
                 TextField("Escribe tu búsqueda...",
-                          text: $query,
-                          onCommit: fetch)
+                          text: Binding(
+                            get: {
+                                return self.query
+                            },
+                            set: { (newValue) in
+                                self.fetch(query: newValue)
+                                return self.query = newValue
+                          })
+                    )
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
                 ForEach(beerStore.beers) { beer in
                     BeerView(beer: beer)
                 }
             }.navigationBarTitle(Text("Busca tu cerveza"))
-        }.onAppear(perform: fetch)
+        }
     }
     
-    private func fetch() {
+    
+    private func fetch(query: String) {
         beerStore.fetch(matching: query)
     }
+    
 }
 
 struct SearchView_Previews: PreviewProvider {
