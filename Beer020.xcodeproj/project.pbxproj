@@ -72,6 +72,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D3F445ED23C48A0A00201FAF /* Modelo */ = {
+			isa = PBXGroup;
+			children = (
+				D3FBE00923C0941E0034E5DC /* Beer.swift */,
+				D3FBE01023C09D550034E5DC /* BeerStore.swift */,
+			);
+			path = Modelo;
+			sourceTree = "<group>";
+		};
+		D3F445EE23C48A6000201FAF /* Aux */ = {
+			isa = PBXGroup;
+			children = (
+				D3B5B5AA23C215EB007924B6 /* RemoteImageURL.swift */,
+			);
+			path = Aux;
+			sourceTree = "<group>";
+		};
 		D3FBDFD823C092740034E5DC = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +110,8 @@
 		D3FBDFE323C092740034E5DC /* Beer020 */ = {
 			isa = PBXGroup;
 			children = (
+				D3F445EE23C48A6000201FAF /* Aux */,
+				D3F445ED23C48A0A00201FAF /* Modelo */,
 				D3FBE00B23C09BE80034E5DC /* Vistas */,
 				D3FBE00623C092D00034E5DC /* PunkAPI */,
 				D3FBDFE423C092740034E5DC /* AppDelegate.swift */,
@@ -126,9 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				D3FBE00723C092EC0034E5DC /* PunkAPI.swift */,
-				D3FBE00923C0941E0034E5DC /* Beer.swift */,
-				D3FBE01023C09D550034E5DC /* BeerStore.swift */,
-				D3B5B5AA23C215EB007924B6 /* RemoteImageURL.swift */,
 			);
 			path = PunkAPI;
 			sourceTree = "<group>";
@@ -418,7 +434,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = es.codigoswift.Beer020;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -438,7 +454,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = es.codigoswift.Beer020;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

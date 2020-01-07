@@ -9,6 +9,10 @@
 // Entendemos que el id, el nombre y la descripción son obligatorios.
 // El resto de los campos los tomamos como opcionales just in case
 
+/**
+ La clase cerveza contiene la información que disponemos sobre una cerveza.
+ Sólo se ha trabajado con un subconjunto de la información disponible aportada por Punk.
+ */
 struct Beer: Decodable, Identifiable {
     var id: Int
     let name: String

@@ -9,6 +9,9 @@
 import Foundation
 import Combine
 
+/**
+ BeerStore almacena un array con todas las cervezas resultado de la búsqueda.
+ */
 class BeerStore: ObservableObject {
     @Published private(set) var beers: [Beer] = []
     
@@ -18,6 +21,10 @@ class BeerStore: ObservableObject {
         self.punkService = punkService
     }
     
+    /**
+     Lanza la búsqueda de las cervezas con el criterio especificado en query.
+     *Actualiza la variable publicada beers.*
+     */
     func fetch(matching query: String) {
         punkService.search(matching: query) { [weak self] resultado in
             DispatchQueue.main.async {

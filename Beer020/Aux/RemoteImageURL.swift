@@ -9,11 +9,16 @@
 import Foundation
 import Combine
 
+/**
+ RemoteImageURL es una clase observable que llama a una url que contiene una imagen y se descarga la misma.
+ */
 class RemoteImageURL: ObservableObject {
-    @Published var data = Data()
+    @Published var data = Data() // variable que nos interesa observar.
+    
     
     init(imageURL: String) {
         guard let url = URL(string: imageURL) else { return }
+        
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else { return }
             

@@ -35,3 +35,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+/**
+ Dotamos a Application de la capacidad de enviar la señal de resignFirstResponder.
+ Utilizaremos esta función para suplir la carencia que todavía tiene swiftUI a la hora de gestionar el firstResponder.
+ */
+extension UIApplication {
+    func endEditing() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}

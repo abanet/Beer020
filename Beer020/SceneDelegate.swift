@@ -19,6 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
+            /// iniciamos nuestra cervecería y la añadimos al environment de nuestra vista principal.
             let beerStore = BeerStore(punkService: .init())
             window.rootViewController = UIHostingController(rootView: SearchView().environmentObject(beerStore))
             self.window = window
