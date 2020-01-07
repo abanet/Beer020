@@ -33,12 +33,12 @@ struct SearchView: View {
                     footer: Text("pie de tabla".localized)
                     .foregroundColor(.white)) {
                 ForEach(beerStore.beers) { beer in
-                    NavigationLink(destination: BeerDetail(beer: beer)) {
+                    NavigationLink(destination: BeerDetail(beerVM: BeerDetailViewModel(beer: beer))) {
                         BeerView(beer: beer)
                     }
                 }
                 }
-            }.navigationBarTitle(Text("The perfect beer".localized))
+            }.navigationBarTitle(Text("The perfect beer"))
                 .onAppear { // focus fuera si hemos salido de la vista para no tener el teclado ocupando pantalla.
                     self.endEditing()
             }

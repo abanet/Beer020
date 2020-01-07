@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct BeerDetail: View {
-    let beer: Beer
+    
+    let beerVM: BeerDetailViewModel
     
     var body: some View {
         ZStack {
@@ -19,11 +20,11 @@ struct BeerDetail: View {
             
             VStack(alignment: .center) {
                 
-                BeerImageView(imageURL: beer.image_url)
+                BeerImageView(imageURL: beerVM.urlImagen())
                 
                 HStack {
                     Spacer()
-                    Text(beer.name)
+                    Text(beerVM.nombre())
                         .font(.headline)
                         .multilineTextAlignment(.center)
                         .lineLimit(2)
@@ -35,7 +36,7 @@ struct BeerDetail: View {
                 
                 HStack {
                     Spacer()
-                    Text(beer.brewers_tips ?? "no tips".localized)
+                    Text(beerVM.tips())
                     .font(.subheadline)
                     .padding()
                     Spacer()
@@ -50,7 +51,7 @@ struct BeerDetail: View {
                     Spacer()
                 }
                 
-                List(beer.food_pairing!,id: \.self) { string in
+                List(beerVM.food(), id: \.self) { string in
                     HStack {
                         Text("🍺")
                         Text(string)

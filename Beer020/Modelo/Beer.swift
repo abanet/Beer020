@@ -16,8 +16,20 @@
 struct Beer: Decodable, Identifiable {
     var id: Int
     let name: String
+    let ph: Double?
     let description: String
     let image_url: String?
     let food_pairing: [String]?
     let brewers_tips: String?
+
+    init() {
+        id = 0
+        name = ""
+        ph = nil
+        description = ""
+        image_url = nil
+        food_pairing = nil
+        brewers_tips = nil
+    }
 }
+
