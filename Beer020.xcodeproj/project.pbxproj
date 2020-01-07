@@ -10,6 +10,8 @@
 		D3B5B5A723C2113C007924B6 /* BeerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5B5A623C2113C007924B6 /* BeerDetail.swift */; };
 		D3B5B5A923C2159E007924B6 /* BeerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5B5A823C2159E007924B6 /* BeerImageView.swift */; };
 		D3B5B5AB23C215EB007924B6 /* RemoteImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5B5AA23C215EB007924B6 /* RemoteImageURL.swift */; };
+		D3F445F023C4AF0800201FAF /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F445EF23C4AF0800201FAF /* String+Extensions.swift */; };
+		D3F445F323C4AFA600201FAF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3F445F523C4AFA600201FAF /* Localizable.strings */; };
 		D3FBDFE523C092740034E5DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FBDFE423C092740034E5DC /* AppDelegate.swift */; };
 		D3FBDFE723C092740034E5DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FBDFE623C092740034E5DC /* SceneDelegate.swift */; };
 		D3FBDFEB23C092750034E5DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FBDFEA23C092750034E5DC /* Assets.xcassets */; };
@@ -37,6 +39,9 @@
 		D3B5B5A623C2113C007924B6 /* BeerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetail.swift; sourceTree = "<group>"; };
 		D3B5B5A823C2159E007924B6 /* BeerImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerImageView.swift; sourceTree = "<group>"; };
 		D3B5B5AA23C215EB007924B6 /* RemoteImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageURL.swift; sourceTree = "<group>"; };
+		D3F445EF23C4AF0800201FAF /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		D3F445F423C4AFA600201FAF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D3F445F623C4AFDB00201FAF /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D3FBDFE123C092740034E5DC /* Beer020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beer020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FBDFE423C092740034E5DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3FBDFE623C092740034E5DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				D3B5B5AA23C215EB007924B6 /* RemoteImageURL.swift */,
+				D3F445EF23C4AF0800201FAF /* String+Extensions.swift */,
 			);
 			path = Aux;
 			sourceTree = "<group>";
@@ -120,6 +126,7 @@
 				D3FBDFEF23C092750034E5DC /* LaunchScreen.storyboard */,
 				D3FBDFF223C092750034E5DC /* Info.plist */,
 				D3FBDFEC23C092750034E5DC /* Preview Content */,
+				D3F445F523C4AFA600201FAF /* Localizable.strings */,
 			);
 			path = Beer020;
 			sourceTree = "<group>";
@@ -224,6 +231,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = D3FBDFD823C092740034E5DC;
 			productRefGroup = D3FBDFE223C092740034E5DC /* Products */;
@@ -242,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3FBDFF123C092750034E5DC /* LaunchScreen.storyboard in Resources */,
+				D3F445F323C4AFA600201FAF /* Localizable.strings in Resources */,
 				D3FBDFEE23C092750034E5DC /* Preview Assets.xcassets in Resources */,
 				D3FBDFEB23C092750034E5DC /* Assets.xcassets in Resources */,
 			);
@@ -262,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3FBE00823C092EC0034E5DC /* PunkAPI.swift in Sources */,
+				D3F445F023C4AF0800201FAF /* String+Extensions.swift in Sources */,
 				D3FBDFE523C092740034E5DC /* AppDelegate.swift in Sources */,
 				D3B5B5A923C2159E007924B6 /* BeerImageView.swift in Sources */,
 				D3FBE00D23C09C120034E5DC /* BeerView.swift in Sources */,
@@ -293,6 +303,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D3F445F523C4AFA600201FAF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3F445F423C4AFA600201FAF /* en */,
+				D3F445F623C4AFDB00201FAF /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		D3FBDFEF23C092750034E5DC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -308,6 +327,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -368,6 +388,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  Beer020
+
+  Created by Alberto Banet Masa on 07/01/2020.
+  Copyright © 2020 Alberto Banet Masa. All rights reserved.
+*/
+
+/* SearchView*/
+"The perfect beer"  = "The perfect beer";
+"Type your food..." = "Type your food...";
+"pie de tabla"      = "Nothing more important than eating with the right beer!";
+
+/* BeerDetail */
+"Ideal to drink with"   = "Ideal to drink with:";
+"no tips" = "There are no tips for this beer. Drink it anyway!";

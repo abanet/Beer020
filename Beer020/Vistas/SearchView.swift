@@ -16,7 +16,7 @@ struct SearchView: View {
         
         NavigationView {
             List {
-                TextField("Escribe tu búsqueda...",
+                TextField("Type your food...".localized,
                           text: Binding(
                             get: {
                                 return self.query
@@ -28,19 +28,30 @@ struct SearchView: View {
                           onCommit: self.endEditing
                     )
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    
+                  
+                Section(
+                    footer: Text("pie de tabla".localized)
+                    .foregroundColor(.white)) {
                 ForEach(beerStore.beers) { beer in
                     NavigationLink(destination: BeerDetail(beer: beer)) {
                         BeerView(beer: beer)
                     }
                 }
-            }.navigationBarTitle(Text("Busca tu cerveza"))
+                }
+            }.navigationBarTitle(Text("The perfect beer".localized))
                 .onAppear { // focus fuera si hemos salido de la vista para no tener el teclado ocupando pantalla.
                     self.endEditing()
             }
         }
+       
     }
     
+    
+    init() {
+        UITableView.appearance().separatorColor = .clear
+        UITableView.appearance().backgroundColor = UIColor(named: "background")
+        UITableViewCell.appearance().backgroundColor = UIColor(named: "background")
+    }
     
     private func fetch(query: String) {
         beerStore.fetch(matching: query)
