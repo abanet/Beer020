@@ -9,13 +9,13 @@
 import SwiftUI
 
 struct BeerView: View {
-    let beer: Beer
+    let beerVM: BeerDetailViewModel
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(beer.name)
+            Text(beerVM.nombre())
                 .font(.headline)
-          //  Text(beer.description)
+          //  Text(beerVM.descripcion())
            //     .font(.subheadline)
         }
     }

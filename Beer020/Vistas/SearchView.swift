@@ -34,7 +34,7 @@ struct SearchView: View {
                     .foregroundColor(.white)) {
                 ForEach(beerStore.beers) { beer in
                     NavigationLink(destination: BeerDetail(beerVM: BeerDetailViewModel(beer: beer))) {
-                        BeerView(beer: beer)
+                        BeerView(beerVM: BeerDetailViewModel(beer: beer))
                     }
                 }
                 }
