@@ -15,8 +15,6 @@ struct BeerView: View {
         VStack(alignment: .leading) {
             Text(beerVM.nombre())
                 .font(.headline)
-          //  Text(beerVM.descripcion())
-           //     .font(.subheadline)
         }
     }
 }

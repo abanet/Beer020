@@ -20,9 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             window.tintColor = .white // para tinta de botones back de navigationview, etc
-            /// iniciamos nuestra cervecería y la añadimos al environment de nuestra vista principal.
-            let beerStore = BeerStore(punkService: .init())
-            window.rootViewController = UIHostingController(rootView: SearchView().environmentObject(beerStore))
+         
+            window.rootViewController = UIHostingController(rootView: SearchView())
             self.window = window
             window.makeKeyAndVisible()
         }

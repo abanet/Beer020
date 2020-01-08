@@ -9,15 +9,18 @@
 import Foundation
 
 
-class BeerDetailViewModel {
+class BeerDetailViewModel: Identifiable {
     var beer: Beer
+    var id: Int
     
     init() {
         beer = Beer()
+        id = beer.id
     }
     
     init(beer: Beer) {
         self.beer = beer
+        self.id = beer.id
     }
     
     func nombre() -> String {

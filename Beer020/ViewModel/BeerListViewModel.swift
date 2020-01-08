@@ -7,7 +7,34 @@
 //
 
 import Foundation
+import Combine
 
-class BeerListViewModel: {
+/**
+ BeerStore almacena un array con todas las cervezas resultado de la búsqueda.
+ */
+class BeerListViewModel: ObservableObject {
+    @Published private(set) var beers: [BeerDetailViewModel] = []
     
+    private let punkService: PunkAPI
+    
+    init(punkService: PunkAPI) {
+        self.punkService = punkService
+    }
+    
+    /**
+     Lanza la búsqueda de las cervezas con el criterio especificado en query.
+     *Actualiza la variable publicada beers.*
+     */
+    func fetch(matching query: String) {
+        punkService.search(matching: query) { [weak self] resultado in
+            DispatchQueue.main.async {
+                switch resultado {
+                case .success(let beers): self?.beers = beers.map(BeerDetailViewModel.init)
+                case .failure: self?.beers = []
+                }
+            }
+            
+        }
+    }
 }
+

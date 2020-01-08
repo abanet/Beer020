@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SearchView: View {
     @State private var query: String = ""
-    @EnvironmentObject var beerStore: BeerStore
+    @ObservedObject var beerList = BeerListViewModel(punkService: .init())
     
     var body: some View {
         
@@ -20,30 +20,30 @@ struct SearchView: View {
                           text: Binding(
                             get: {
                                 return self.query
-                            },
+                          },
                             set: { (newValue) in
                                 self.fetch(query: newValue)
                                 return self.query = newValue
                           }),
                           onCommit: self.endEditing
-                    )
+                )
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                  
+                
                 Section(
                     footer: Text("pie de tabla".localized)
-                    .foregroundColor(.white)) {
-                ForEach(beerStore.beers) { beer in
-                    NavigationLink(destination: BeerDetail(beerVM: BeerDetailViewModel(beer: beer))) {
-                        BeerView(beerVM: BeerDetailViewModel(beer: beer))
-                    }
-                }
+                        .foregroundColor(.white)) {
+                            ForEach(beerList.beers) { beer in
+                                NavigationLink(destination: BeerDetail(beerVM:  beer)) {
+                                    BeerView(beerVM: beer)
+                                }
+                            }
                 }
             }.navigationBarTitle(Text("The perfect beer"))
                 .onAppear { // focus fuera si hemos salido de la vista para no tener el teclado ocupando pantalla.
                     self.endEditing()
             }
         }
-       
+        
     }
     
     
@@ -54,7 +54,7 @@ struct SearchView: View {
     }
     
     private func fetch(query: String) {
-        beerStore.fetch(matching: query)
+        beerList.fetch(matching: query)
     }
     
     private func endEditing() {

@@ -24,7 +24,6 @@
 		D3FBE00A23C0941E0034E5DC /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FBE00923C0941E0034E5DC /* Beer.swift */; };
 		D3FBE00D23C09C120034E5DC /* BeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FBE00C23C09C120034E5DC /* BeerView.swift */; };
 		D3FBE00F23C09CBC0034E5DC /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FBE00E23C09CBC0034E5DC /* SearchView.swift */; };
-		D3FBE01123C09D550034E5DC /* BeerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FBE01023C09D550034E5DC /* BeerStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +59,6 @@
 		D3FBE00923C0941E0034E5DC /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		D3FBE00C23C09C120034E5DC /* BeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerView.swift; sourceTree = "<group>"; };
 		D3FBE00E23C09CBC0034E5DC /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
-		D3FBE01023C09D550034E5DC /* BeerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				D3FBE00923C0941E0034E5DC /* Beer.swift */,
-				D3FBE01023C09D550034E5DC /* BeerStore.swift */,
 			);
 			path = Modelo;
 			sourceTree = "<group>";
@@ -303,7 +300,6 @@
 				D3B5B5AB23C215EB007924B6 /* RemoteImageURL.swift in Sources */,
 				D3B5B5A723C2113C007924B6 /* BeerDetail.swift in Sources */,
 				D3FBE00A23C0941E0034E5DC /* Beer.swift in Sources */,
-				D3FBE01123C09D550034E5DC /* BeerStore.swift in Sources */,
 				D3FBDFE723C092740034E5DC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
