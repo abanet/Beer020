@@ -10,6 +10,9 @@
 "The perfect beer"  = "The perfect beer";
 "Type your food..." = "Type your food...";
 "pie de tabla"      = "Nothing more important than eating with the right beer!";
+"No Network available!" = "No Network available!";
+"Please check your network conection." = "Please check your network conection.";
+"Got it!" = "Got it!";
 
 /* BeerDetail */
 "Ideal to drink with"   = "Ideal to drink with:";

@@ -8,9 +8,11 @@
 
 import SwiftUI
 
+
 struct SearchView: View {
     @State private var query: String = ""
     @ObservedObject var beerList = BeerListViewModel(punkService: .init())
+    @State private var alertaRed = false
     
     var body: some View {
         
@@ -41,9 +43,12 @@ struct SearchView: View {
             }.navigationBarTitle(Text("The perfect beer"))
                 .onAppear { // focus fuera si hemos salido de la vista para no tener el teclado ocupando pantalla.
                     self.endEditing()
+                    self.alertaRed = !Connectivity.isConnectedToInternet()
             }
         }
-        
+        .alert(isPresented: $alertaRed) {
+            Alert(title: Text("No Network available!".localized), message: Text("Please check your network conection.".localized), dismissButton: .default(Text("Got it!".localized)))
+        }
     }
     
     

@@ -24,7 +24,7 @@ struct Beer: Decodable, Identifiable {
 
     init() {
         id = 0
-        name = ""
+        name = "Cerveza Test"
         ph = nil
         description = ""
         image_url = nil

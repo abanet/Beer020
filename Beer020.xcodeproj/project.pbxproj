@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69B5D7D34C7544D333C5C0E2 /* libPods-Beer020.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B727061BBA7E1A8F56B853 /* libPods-Beer020.a */; };
+		C0AD0C4623C72FB300EA2640 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AD0C4523C72FB300EA2640 /* Connectivity.swift */; };
 		C0F70D3123C601CF008C0FE3 /* PunkAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F70D3023C601CF008C0FE3 /* PunkAPITest.swift */; };
 		C0F70D3923C61DF7008C0FE3 /* BeerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F70D3823C61DF7008C0FE3 /* BeerListViewModel.swift */; };
 		D3B5B5A723C2113C007924B6 /* BeerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5B5A623C2113C007924B6 /* BeerDetail.swift */; };
@@ -37,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C0AD0C4523C72FB300EA2640 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		C0F70D2E23C601CF008C0FE3 /* PunkAPITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PunkAPITest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F70D3023C601CF008C0FE3 /* PunkAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunkAPITest.swift; sourceTree = "<group>"; };
 		C0F70D3223C601CF008C0FE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +62,9 @@
 		D3FBE00923C0941E0034E5DC /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		D3FBE00C23C09C120034E5DC /* BeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerView.swift; sourceTree = "<group>"; };
 		D3FBE00E23C09CBC0034E5DC /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		D57448561342A8F6FBC26D9D /* Pods-Beer020.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beer020.release.xcconfig"; path = "Target Support Files/Pods-Beer020/Pods-Beer020.release.xcconfig"; sourceTree = "<group>"; };
+		E3B727061BBA7E1A8F56B853 /* libPods-Beer020.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Beer020.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE1F5AAE98AC5B458A644195 /* Pods-Beer020.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beer020.debug.xcconfig"; path = "Target Support Files/Pods-Beer020/Pods-Beer020.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,12 +79,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69B5D7D34C7544D333C5C0E2 /* libPods-Beer020.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA132196424532F5CB5041CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3B727061BBA7E1A8F56B853 /* libPods-Beer020.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0AD0C4723C7450D00EA2640 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C0AD0C4523C72FB300EA2640 /* Connectivity.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		C0F70D2F23C601CF008C0FE3 /* PunkAPITest */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +109,15 @@
 				C0F70D3223C601CF008C0FE3 /* Info.plist */,
 			);
 			path = PunkAPITest;
+			sourceTree = "<group>";
+		};
+		D0D5CECA55F4F1CBCA6C68C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EE1F5AAE98AC5B458A644195 /* Pods-Beer020.debug.xcconfig */,
+				D57448561342A8F6FBC26D9D /* Pods-Beer020.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		D3F445ED23C48A0A00201FAF /* Modelo */ = {
@@ -120,6 +152,8 @@
 				D3FBDFE323C092740034E5DC /* Beer020 */,
 				C0F70D2F23C601CF008C0FE3 /* PunkAPITest */,
 				D3FBDFE223C092740034E5DC /* Products */,
+				D0D5CECA55F4F1CBCA6C68C5 /* Pods */,
+				AA132196424532F5CB5041CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +169,7 @@
 		D3FBDFE323C092740034E5DC /* Beer020 */ = {
 			isa = PBXGroup;
 			children = (
+				C0AD0C4723C7450D00EA2640 /* Network */,
 				D3F445F723C4D88000201FAF /* ViewModel */,
 				D3F445EE23C48A6000201FAF /* Aux */,
 				D3F445ED23C48A0A00201FAF /* Modelo */,
@@ -203,6 +238,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3FBE00023C092750034E5DC /* Build configuration list for PBXNativeTarget "Beer020" */;
 			buildPhases = (
+				9F0B275813EE73ED68BDB5D9 /* [CP] Check Pods Manifest.lock */,
 				D3FBDFDD23C092740034E5DC /* Sources */,
 				D3FBDFDE23C092740034E5DC /* Frameworks */,
 				D3FBDFDF23C092740034E5DC /* Resources */,
@@ -276,6 +312,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9F0B275813EE73ED68BDB5D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Beer020-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C0F70D2A23C601CF008C0FE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -297,6 +358,7 @@
 				D3B5B5A923C2159E007924B6 /* BeerImageView.swift in Sources */,
 				D3FBE00D23C09C120034E5DC /* BeerView.swift in Sources */,
 				D3FBE00F23C09CBC0034E5DC /* SearchView.swift in Sources */,
+				C0AD0C4623C72FB300EA2640 /* Connectivity.swift in Sources */,
 				D3B5B5AB23C215EB007924B6 /* RemoteImageURL.swift in Sources */,
 				D3B5B5A723C2113C007924B6 /* BeerDetail.swift in Sources */,
 				D3FBE00A23C0941E0034E5DC /* Beer.swift in Sources */,
@@ -493,6 +555,7 @@
 		};
 		D3FBE00123C092750034E5DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE1F5AAE98AC5B458A644195 /* Pods-Beer020.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -513,6 +576,7 @@
 		};
 		D3FBE00223C092750034E5DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D57448561342A8F6FBC26D9D /* Pods-Beer020.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

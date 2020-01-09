@@ -14,8 +14,17 @@ struct BeerView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(beerVM.nombre())
-                .font(.headline)
+                .font(.subheadline)
+                .bold()
         }
+    }
+}
+
+
+let beerVM: BeerDetailViewModel = BeerDetailViewModel(beer: Beer())
+struct BearView_Previews: PreviewProvider {
+    static var previews: some View {
+       BeerView(beerVM: beerVM)
     }
 }
 
